@@ -1,0 +1,108 @@
+
+/* Class = "UITabBarItem"; title = "Hymn"; ObjectID = "1SB-Mw-qPG"; */
+"1SB-Mw-qPG.title" = "Hymn";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4bc-0F-8cM"; */
+"4bc-0F-8cM.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "KJV흠정역"; ObjectID = "5Pj-4J-Hr5"; */
+"5Pj-4J-Hr5.configuration.title" = "KJV Korean";
+
+/* Class = "UIButton"; normalTitle = "KJV흠정역"; ObjectID = "5Pj-4J-Hr5"; */
+"5Pj-4J-Hr5.normalTitle" = "KJV Korean";
+
+/* Class = "UILabel"; text = "즐겨찾는 말씀"; ObjectID = "Ej9-YG-fxS"; */
+"Ej9-YG-fxS.text" = "Favorite Words";
+
+/* Class = "UILabel"; text = "NIV"; ObjectID = "Ezd-cw-S3e"; */
+"Ezd-cw-S3e.text" = "NIV";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "G8t-co-Ayb"; */
+"G8t-co-Ayb.title" = "Home";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Gkr-5j-TJ8"; */
+"Gkr-5j-TJ8.text" = "Label";
+
+/* Class = "UILabel"; text = "개역개정"; ObjectID = "HBI-gx-Zh0"; */
+"HBI-gx-Zh0.text" = "개역개정";
+
+/* Class = "UIButton"; configuration.title = "개역개정"; ObjectID = "LG6-1H-p8H"; */
+"LG6-1H-p8H.configuration.title" = "개역개정";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LG6-1H-p8H"; */
+"LG6-1H-p8H.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "성경"; ObjectID = "LWE-tH-Cb9"; */
+"LWE-tH-Cb9.title" = "Bible";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "NMF-aT-Dwb"; */
+"NMF-aT-Dwb.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "R1A-WV-Bbf"; */
+"R1A-WV-Bbf.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "NIV"; ObjectID = "R4i-H3-08R"; */
+"R4i-H3-08R.configuration.title" = "NIV";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "R4i-H3-08R"; */
+"R4i-H3-08R.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "KJV 흠정역"; ObjectID = "Uz5-Yg-PR6"; */
+"Uz5-Yg-PR6.text" = "KJV Korean";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YI9-dw-thh"; */
+"YI9-dw-thh.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "홈"; ObjectID = "ctI-cY-ftA"; */
+"ctI-cY-ftA.title" = "Home";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "f8U-XE-WkL"; */
+"f8U-XE-WkL.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "l2L-Zi-hsZ"; */
+"l2L-Zi-hsZ.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; configuration.title = "KJV"; ObjectID = "lRG-Sm-5zx"; */
+"lRG-Sm-5zx.configuration.title" = "KJV";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "lRG-Sm-5zx"; */
+"lRG-Sm-5zx.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "창세기"; ObjectID = "mFk-zr-iCB"; */
+"mFk-zr-iCB.configuration.title" = "Genesis";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mFk-zr-iCB"; */
+"mFk-zr-iCB.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Bible"; ObjectID = "ow8-4x-EoD"; */
+"ow8-4x-EoD.title" = "Bible";
+
+/* Class = "UILabel"; text = "우리가 너희 모두로 인해 항상 하나님께 감사드리며 기도할 때에 너희에 관하여 말함은"; ObjectID = "qYN-h0-C9J"; */
+"qYN-h0-C9J.text" = "우리가 너희 모두로 인해 항상 하나님께 감사드리며 기도할 때에 너희에 관하여 말함은";
+
+/* Class = "UIButton"; configuration.title = "1장"; ObjectID = "s8F-qW-Pn5"; */
+"s8F-qW-Pn5.configuration.title" = "1장";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "s8F-qW-Pn5"; */
+"s8F-qW-Pn5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "KJV"; ObjectID = "t7F-hb-SYg"; */
+"t7F-hb-SYg.text" = "KJV";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "vJJ-67-ecH"; */
+"vJJ-67-ecH.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "데살로니가전서 1:2"; ObjectID = "vXt-gS-EaX"; */
+"vXt-gS-EaX.text" = "데살로니가전서 1:2";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "xxK-OR-Pco"; */
+"xxK-OR-Pco.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "오늘의 말씀 (KJV흠정역) :"; ObjectID = "z9I-Qa-F3J"; */
+"z9I-Qa-F3J.text" = "Today's word:";
+
+"xgs-zq-mPn.title" = "More";
+"4jg-Xn-fCh.text" = "You have read the Bible a total of";
+"ig3-7E-liS.text" = "so far.";
+"3WV-a6-Twa.text" = "Book Name:";
+
