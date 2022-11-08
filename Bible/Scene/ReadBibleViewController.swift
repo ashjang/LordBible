@@ -21,6 +21,8 @@ class ReadBibleViewController: UIViewController  {
         }
     }
     
+    var launchType = false
+    
     private var readTimes = [ReadTimes(time: 0, totalChap: 0)] {
         didSet {
             self.saveTimesOfReading()
@@ -32,8 +34,11 @@ class ReadBibleViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pikAddressName = "Genesis"
-        bookNameTxt.text = "Genesis".localized()
+        if launchType == false {
+            pikAddressName = "Genesis"
+//            bookNameTxt.text = "Genesis".localized()
+        }
+        bookNameTxt.text = "\(pikAddressName!)".localized()
 //        bookNameTxt.layer.borderWidth = 2.0
         bookNameTxt.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 8.0, height: 0.0))
         readTimeLabel.text = "0 " + "times".localized()

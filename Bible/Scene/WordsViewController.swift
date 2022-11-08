@@ -184,6 +184,8 @@ class WordsViewController: UIViewController {
                     let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "ReadBibleViewController") as? ReadBibleViewController
                     pushVC?.hidesBottomBarWhenPushed = true
                     pushVC?.readBibleRecord = ReadBible(address: self.pikAddressName!, chapter: self.pikChapterNum!)
+                    pushVC?.pikAddressName = self.pikAddressName
+                    pushVC?.launchType = true
                     self.navigationController?.pushViewController(pushVC!, animated: true)
                 })
             ]
