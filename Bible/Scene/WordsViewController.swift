@@ -36,6 +36,7 @@ class WordsViewController: UIViewController {
     private var pikChapterNum: String?
     private var com0: Int = 0
     private var com1: Int?
+    private var pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.main.bounds.width), height: Int((UIScreen.main.bounds.height-20)/3)))
     
     // for TableView Data
     private var oneChapterList: [Verse] = []
@@ -98,6 +99,8 @@ class WordsViewController: UIViewController {
             txtAddress.text = "Genesis".localized() + "   " + "1"
             pikAddressName = "Genesis"
             pikChapterNum = "1"
+            createPickerView()
+            self.pickerView.selectRow(0, inComponent: 0, animated: true)
         } else {
             loadBibleVersion()
             if "\(setBibleVersion[0].type)" == "KJV흠정역" {
@@ -122,6 +125,9 @@ class WordsViewController: UIViewController {
             pikAddressName = self.wordSave[0].address
             pikChapterNum = self.wordSave[0].chapter
             txtAddress.text = "\(pikAddressName!)".localized() + "   " + "\(pikChapterNum!)"
+            createPickerView()
+            self.pickerView.selectRow(name.firstIndex(of: pikAddressName!)!, inComponent: 0, animated: true)
+            self.pickerView.selectRow(Int("\(pikChapterNum!)")! - 1, inComponent: 1, animated: true)
         }
         
         self.selectedBtnLabel.text = "Order".localized() + ": " + "\(self.btnList)"
@@ -134,7 +140,7 @@ class WordsViewController: UIViewController {
                                     withConfiguration: UIImage.SymbolConfiguration(pointSize: 21, weight: .regular, scale: .default)), for: .normal)
         self.navigationController?.navigationBar.tintColor = .textLabelColor
         
-        createPickerView()
+        
         chapterTableView.backgroundColor = .backgroundColor
         chapterTableView.allowsMultipleSelection = true
 //        if is_KJV_KOR {
@@ -448,10 +454,10 @@ class WordsViewController: UIViewController {
     
     // 피커뷰생성
     func createPickerView() {
-        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.main.bounds.width), height: Int((UIScreen.main.bounds.height-20)/3)))
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        pickerView.reloadAllComponents()
+        
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        self.pickerView.reloadAllComponents()
         txtAddress.tintColor = .clear
         txtAddress.inputView = pickerView
         
@@ -567,6 +573,8 @@ extension WordsViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPick
         if component == 0 {
             return name.count
         } else {
+            self.com0 = name.firstIndex(of: pikAddressName!)!
+            print(self.com0)
             return address_chapterNum[self.com0]
         }
     }
@@ -578,9 +586,10 @@ extension WordsViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPick
         }
         else {
             var arrChapterNum : [String] = []
-            let selectedAd = pickerView.selectedRow(inComponent: 0)
+//            let selectedAd = pickerView.selectedRow(inComponent: 0)
+            let selectedAd = name.firstIndex(of: pikAddressName!)!
             let number = address_chapterNum[selectedAd]
-            for i in 0...(number) {
+            for i in 0...(number - 1) {
                 arrChapterNum.append(String(i+1))
             }
             if arrChapterNum.indices.contains(row) {
@@ -599,9 +608,11 @@ extension WordsViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPick
         }
         let addIndex = pickerView.selectedRow(inComponent: 0)
         self.com0 = addIndex
-        let chapterIndex = pickerView.selectedRow(inComponent: 1)
         self.pikAddressName = name[addIndex]
+        let chapterIndex = pickerView.selectedRow(inComponent: 1)
+//        self.pikAddressName = name[addIndex]
         self.pikChapterNum = String(chapterIndex + 1)
+        print(self.pikChapterNum)
         pickerView.reloadComponent(1)
     }
     
