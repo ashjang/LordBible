@@ -49,22 +49,29 @@
 ## 최종 구현 화면
 
 #### - 초기화면
-![초기화면](doc/img/intial.jpg)
 <div>
-  <img src="doc/img/intial.jpg" width="200" height="400">
+  <img src="doc/img/intial.jpg" width="400" height="800">
 </div>
 
 #### - 홈화면
-![홈화면1](doc/img/home.jpg)
-![즐겨찾는 말씀](doc/img/star.jpg)
+<div>
+  <img src="doc/img/home.jpg" width="400" height="800">
+  <img src="doc/img/star.jpg" width="400" height="800">
+</div>
+
 #### - 성경말씀
-![성경1](doc/img/bible2.jpg)
-![성경2](doc/img/bible3.jpg)
-![성경3](doc/img/bible4.jpg)
+<div>
+  <img src="doc/img/bible2.jpg" width="400" height="800">
+  <img src="doc/img/bible3.jpg" width="400" height="800">
+  <img src="doc/img/bible4.jpg" width="400" height="800">
+</div>
+
 #### - 더보기
-![더보기](doc/img/setting1.jpg)
-![더보기](doc/img/more.jpg)
-![더보기](doc/img/setVer.jpg)
-![읽기완료](doc/img/read_check.jpg)
-![메일보내기](doc/img/mail.jpg)
-![출처](doc/img/from.jpg)
+<div>
+  <img src="doc/img/setting1.jpg" width="400" height="800">
+  <img src="doc/img/more.jpg" width="400" height="800">
+  <img src="doc/img/setVer.jpg" width="400" height="800">
+  <img src="doc/img/read_check.jpg" width="400" height="800">
+  <img src="doc/img/mail.jpg" width="400" height="800">
+  <img src="doc/img/from.jpg" width="400" height="800">
+</div>
