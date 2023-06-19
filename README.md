@@ -50,28 +50,28 @@
 
 #### - 초기화면
 <div>
-  <img src="doc/img/intial.jpg" width="400" height="800">
+  <img src="doc/img/intial.jpg" width="300" height="600">
 </div>
 
 #### - 홈화면
 <div>
-  <img src="doc/img/home.jpg" width="400" height="800">
-  <img src="doc/img/star.jpg" width="400" height="800">
+  <img src="doc/img/home.jpg" width="300" height="600">
+  <img src="doc/img/star.jpg" width="300" height="600">
 </div>
 
 #### - 성경말씀
 <div>
-  <img src="doc/img/bible2.jpg" width="400" height="800">
-  <img src="doc/img/bible3.jpg" width="400" height="800">
-  <img src="doc/img/bible4.jpg" width="400" height="800">
+  <img src="doc/img/bible2.jpg" width="300" height="600">
+  <img src="doc/img/bible3.jpg" width="300" height="600">
+  <img src="doc/img/bible4.jpg" width="300" height="600">
 </div>
 
 #### - 더보기
 <div>
-  <img src="doc/img/setting1.jpg" width="400" height="800">
-  <img src="doc/img/more.jpg" width="400" height="800">
-  <img src="doc/img/setVer.jpg" width="400" height="800">
-  <img src="doc/img/read_check.jpg" width="400" height="800">
-  <img src="doc/img/mail.jpg" width="400" height="800">
-  <img src="doc/img/from.jpg" width="400" height="800">
+  <img src="doc/img/setting1.jpg" width="300" height="600">
+  <img src="doc/img/more.jpg" width="300" height="600">
+  <img src="doc/img/setVer.jpg" width="300" height="600">
+  <img src="doc/img/read_check.jpg" width="300" height="600">
+  <img src="doc/img/mail.jpg" width="300" height="600">
+  <img src="doc/img/from.jpg" width="300" height="600">
 </div>
