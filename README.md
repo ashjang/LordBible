@@ -50,6 +50,10 @@
 
 #### - 초기화면
 ![초기화면](doc/img/intial.jpg)
+<div>
+  <img src="doc/img/intial.jpg" width="200" height="400">
+</div>
+
 #### - 홈화면
 ![홈화면1](doc/img/home.jpg)
 ![즐겨찾는 말씀](doc/img/star.jpg)
