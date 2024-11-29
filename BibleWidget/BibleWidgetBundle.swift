@@ -12,6 +12,7 @@ import SwiftUI
 struct BibleWidgetBundle: WidgetBundle {
     var body: some Widget {
         BibleWidget()
+        BibleWidget2()
         BibleWidgetLiveActivity()
     }
 }

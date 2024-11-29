@@ -7,7 +7,25 @@
 		<key>Bible.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>15</integer>
+		</dict>
+		<key>BibleWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8772324D28EEAD6000FA83E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>87EB585E2CA523DD0078DB2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

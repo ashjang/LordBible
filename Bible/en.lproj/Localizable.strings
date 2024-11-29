@@ -2,10 +2,15 @@
 "Home" = "Home";
 "Today's Word:" = "Today's Word:";
 "Favorite words" = "Favorite words";
+"Recitation" = "Recitation";
 "Bible" = "Bible";
 "Copy" = "Copy";
 "Highlight" = "Highlight";
 "Read Check" = "Read Check";
+"Put in widget" = "Put in widget";
+"Okay" = "Okay";
+"Check again" = "Please check again";
+"Please select only one verse" = "Please select only one verse";
 
 // bible
 "Genesis" = "Genesis";

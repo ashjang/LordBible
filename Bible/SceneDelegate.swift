@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
+import WidgetKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -56,6 +57,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 extension SceneDelegate {
+    
     private func triggerLocalNotificationMorning() {
         let content = UNMutableNotificationContent()
         let content2 = UNMutableNotificationContent()
@@ -80,56 +82,61 @@ extension SceneDelegate {
         dateComponentEvening.minute = 0
         let trigger2 = UNCalendarNotificationTrigger(dateMatching: dateComponentEvening, repeats: true)
         
-//        let ref: DatabaseReference!
-//        ref = Database.database().reference()
+        let ref: DatabaseReference!
+        ref = Database.database().reference()
         
-//        ref.child("randomWord").child("KJV흠정역").child("\(month.month! - 1)").child("\(day.day!)").observe(.value) { [weak self] snapshot in
-//            guard let value = snapshot.value as? NSDictionary else { return }
-//            self!.content.subtitle = "\(value["address"]!) \(value["chapter"]!):\(value["verse"]!)"
-//            self!.content.body = "\(value["word"]!)"
-//            self!.content.subtitle = ""
-//            self!.content.body = "하루의 시작과 끝을 하나님 말씀으로 정리해보세요 :)"
+        ref.child("randomWord").child("KJV흠정역").child("\(month.month! - 1)").child("\(day.day!)").observe(.value) { [weak self] snapshot in
+            guard let value = snapshot.value as? NSDictionary else { return }
+            content.subtitle = "\((value["address"]! as! String).localized()) \(value["chapter"]!):\(value["verse"]!)"
+            content.body = "\(value["word"]!)"
+            content2.subtitle = "\((value["address"]! as! String).localized()) \(value["chapter"]!):\(value["verse"]!)"
+            content2.body = "\(value["word"]!)"
             
-//            let localRequestMorning = UNNotificationRequest(identifier: "morningAlarm", content: self!.content, trigger: trigger1)
-//            let localRequestEvening = UNNotificationRequest(identifier: "eveningAlarm", content: self!.content, trigger: trigger2)
+            let sharedDefaults = UserDefaults(suiteName: "group.com.Harim.Lordwords")
+            sharedDefaults?.setValue(content.subtitle, forKey: "smallWidgetAddress")
+            sharedDefaults?.setValue(content.body, forKey: "smallWidgetWord")
+            WidgetCenter.shared.reloadAllTimelines()
+            
+            let localRequestMorning = UNNotificationRequest(identifier: "morningAlarm", content: content, trigger: trigger1)
+            let localRequestEvening = UNNotificationRequest(identifier: "eveningAlarm", content: content, trigger: trigger2)
+
+            UNUserNotificationCenter.current().add(localRequestMorning) { (error) in
+                if let error = error {
+                    print("Error:", error.localizedDescription )
+                } else {
+                    NSLog("Notification scheduled")
+                }
+            }
+            UNUserNotificationCenter.current().add(localRequestEvening) { (error) in
+                if let error = error {
+                    print("Error:", error.localizedDescription )
+                } else {
+                    NSLog("Notification scheduled")
+                }
+            }
+        }
+//        content.subtitle = "Good Morning ☀️"
+//        content.body = 
+//        content2.subtitle = "Good Night 🌝"
+//        content2.body = "오늘 하루 수고 많았어요. 기도와 말씀으로 하루의 마무리를 지어보세요 :)"
+        
+//        let localRequestMorning = UNNotificationRequest(identifier: "morningAlarm", content: content, trigger: trigger1)
+//        let localRequestEvening = UNNotificationRequest(identifier: "eveningAlarm", content: content2, trigger: trigger2)
 //
-//            UNUserNotificationCenter.current().add(localRequestMorning) { (error) in
-//                if let error = error {
-//                    print("Error:", error.localizedDescription )
-//                } else {
-//                    NSLog("Notification scheduled")
-//                }
-//            }
-//            UNUserNotificationCenter.current().add(localRequestEvening) { (error) in
-//                if let error = error {
-//                    print("Error:", error.localizedDescription )
-//                } else {
-//                    NSLog("Notification scheduled")
-//                }
+//        UNUserNotificationCenter.current().add(localRequestMorning) { (error) in
+//            if let error = error {
+//                print("Error:", error.localizedDescription )
+//            } else {
+//                NSLog("Notification scheduled")
 //            }
 //        }
-        
-        content.subtitle = "Good Morning ☀️"
-        content.body = "하루의 시작을 하나님 말씀으로 시작해보세요 :)"
-        content2.subtitle = "Good Night 🌝"
-        content2.body = "오늘 하루 수고 많았어요. 기도와 말씀으로 하루의 마무리를 지어보세요 :)"
-        
-        let localRequestMorning = UNNotificationRequest(identifier: "morningAlarm", content: content, trigger: trigger1)
-        let localRequestEvening = UNNotificationRequest(identifier: "eveningAlarm", content: content2, trigger: trigger2)
-
-        UNUserNotificationCenter.current().add(localRequestMorning) { (error) in
-            if let error = error {
-                print("Error:", error.localizedDescription )
-            } else {
-                NSLog("Notification scheduled")
-            }
-        }
-        UNUserNotificationCenter.current().add(localRequestEvening) { (error) in
-            if let error = error {
-                print("Error:", error.localizedDescription )
-            } else {
-                NSLog("Notification scheduled")
-            }
-        }
+//        UNUserNotificationCenter.current().add(localRequestEvening) { (error) in
+//            if let error = error {
+//                print("Error:", error.localizedDescription )
+//            } else {
+//                NSLog("Notification scheduled")
+//            }
+//        }
     }
+    
 }

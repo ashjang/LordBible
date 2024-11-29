@@ -1,4 +1,5 @@
 import UIKit
+import WidgetKit
 import FirebaseDatabase
 
 class ViewController: UIViewController {
@@ -12,6 +13,11 @@ class ViewController: UIViewController {
         }
     }
     
+//    @IBOutlet weak var FRButton: UIButton!
+//    
+//    @IBAction func optionSelection(_ sender: UIAction) {
+//        self.FRButton.setTitle(sender.title.localized(), for: .normal)
+//    }
     
     private var starList = [StarBible]() {
         didSet {
@@ -118,21 +124,6 @@ class ViewController: UIViewController {
     }
     
     func getRandomWord(type: String) {
-//        ref.child("randomWord").child(type).observe(.value) { [weak self] snapshot in
-//            guard let value = snapshot.value as? [NSDictionary] else { return }
-//            do {
-//                let jsonData = try JSONSerialization.data(withJSONObject: value)
-//                let bibleData = try JSONDecoder().decode([RandomBible].self, from: jsonData)
-//                if let random = bibleData.randomElement() {
-//                    wordAddress = "\(random.address.localized()) \(random.chapter):\(random.verse)"
-//                    wordText = "\(random.word)"
-//                    self?.todayWord.text = "\(random.address.localized()) \(random.chapter):\(random.verse)"
-//                    self?.todayWordText.text = "\(random.word)\n(\(type))"
-//                }
-//            } catch let error {
-//                print("Error JSON parsing: \(error.localizedDescription)")
-//            }
-//        }
         let date = Date()
         let month = Calendar.current.dateComponents([.month], from: date)
         let day = Calendar.current.dateComponents([.day], from: date)
@@ -143,6 +134,22 @@ class ViewController: UIViewController {
 //            print("\(value["word"]!)")
             self?.todayWord.text = "\((value["address"]! as! String).localized()) \(value["chapter"]!):\(value["verse"]!)"
             self?.todayWordText.text = "\(value["word"]!)\n(\("KJV흠정역"))"
+        }
+    }
+    
+    public func shareWidget() {
+        let sharedDefaults = UserDefaults(suiteName: "group.com.Harim.Lordwords")
+
+        let localizedStarList = self.starList.map { idx in
+            StarBible(address: idx.address.localized(), chapter: idx.chapter, verse: idx.verse, word: idx.word, isStar: idx.isStar)
+        }
+        
+        do {
+            let jsonData = try JSONEncoder().encode(localizedStarList)
+            let jsonString = String(data: jsonData, encoding: .utf8)
+            sharedDefaults?.setValue(jsonString, forKey: "largeWidgetList")
+        } catch {
+            print("JSON 인코딩 실패 : \(error)")
         }
     }
 }
@@ -159,6 +166,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.starWordText.text = "\(star.word)"
         cell.starWord.textColor = .textLabelColor
         cell.starWordText.textColor = .textLabelColor
+        
         return cell
     }
     
@@ -166,6 +174,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             self.starList.remove(at: (indexPath as NSIndexPath).row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
+//            NotificationCenter.default.post(name: Notification.Name("StarListUpdated"), object: nil)
+//            self.shareWidget()
         }
         self.starTableView.reloadData()
     }
@@ -192,6 +203,12 @@ extension ViewController: WordsViewDelegate {
                 print(i)
             }
         }
+        
+//        NotificationCenter.default.post(name: Notification.Name("StarListUpdated"), object: nil)
+//        self.shareWidget()
+        
         self.starTableView.reloadData()
     }
 }
+
+

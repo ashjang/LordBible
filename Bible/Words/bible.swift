@@ -62,8 +62,9 @@ func loadBibleVersion() {
     let userDefaults = UserDefaults.standard
     guard let data = userDefaults.object(forKey: "bibleVersion") as? [[String: Any]] else { return }
     setBibleVersion = data.compactMap {
-        guard let type = $0["type"] as? String else { return nil }
-        return BibleVersion(type: type)
+        guard let type = $0["type"] as? String else { return nil
+    }
+    return BibleVersion(type: type)
     }
 }
 

@@ -72,9 +72,3 @@ extension BibleWidgetAttributes.ContentState {
      }
 }
 
-#Preview("Notification", as: .content, using: BibleWidgetAttributes.preview) {
-   BibleWidgetLiveActivity()
-} contentStates: {
-    BibleWidgetAttributes.ContentState.smiley
-    BibleWidgetAttributes.ContentState.starEyes
-}

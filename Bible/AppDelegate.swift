@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import UserNotifications
+import WidgetKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         UNUserNotificationCenter.current().delegate = self
+        
         return true
     }
 
@@ -37,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    
 }
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
@@ -49,49 +53,4 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         completionHandler()
     }
     
-//    func generateNotification() {
-//        let content = UNMutableNotificationContent()
-//        content.title = wordAddress!
-//        content.body = wordText!
-//        content.sound = UNNotificationSound.default
-//
-//        var date = DateComponents()
-//        date.hour = 8
-//        date.minute = 30
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-//        let identifier = "morning Notification"
-//        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-//
-//        let notificationCenter = UNUserNotificationCenter.current()
-//        notificationCenter.add(request) { (error) in
-//            if error != nil {
-//                print(error?.localizedDescription)
-//            }
-//        }
-//    }
 }
-
-//extension AppDelegate: UNUserNotificationCenterDelegate {
-//
-//
-//    func generateNotification() {
-//        let content = UNMutableNotificationContent()
-//        content.title = todayWord.text!
-//        content.body = todayWordText.text!
-//        content.sound = UNNotificationSound.default
-//
-//        var date = DateComponents()
-//        date.hour = 8
-//        date.minute = 30
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-//        let identifier = "morning Notification"
-//        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-//
-//        let notificationCenter = UNUserNotificationCenter.current()
-//        notificationCenter.add(request) { (error) in
-//            if error != nil {
-//                print(error?.localizedDescription)
-//            }
-//        }
-//    }
-//}

@@ -94,6 +94,10 @@
 /* Class = "UILabel"; text = "오늘의 말씀 (KJV흠정역) :"; ObjectID = "z9I-Qa-F3J"; */
 "z9I-Qa-F3J.text" = "오늘의 말씀:";
 
+"QEu-0C-kLm.text" = "즐겨찾는 말씀";
+"zYX-ZJ-sCV.text" = "즐겨찾는 말씀";
+"Sow-ex-pnC.text" = "암송";
+
 "xgs-zq-mPn.title" = "더보기";
 "4jg-Xn-fCh.text" = "지금까지 총";
 "ig3-7E-liS.text" = "성경을 읽으셨습니다.";

@@ -235,11 +235,15 @@ extension ReadBibleViewController: UICollectionViewDelegate, UICollectionViewDat
         print("didSelectItemAt")
         print(indexPath.row)
         let chap = String(indexPath.row + 1)
+        
         if let index = self.readList.firstIndex(where: {
             $0.address == self.pikAddressName! && $0.chapter == chap
         }) {
             self.readList.remove(at: index)
             cell.contentView.backgroundColor = .clear
+        } else {
+            self.readList.append(ReadBible(address: self.pikAddressName!, chapter: chap))
+            cell.contentView.backgroundColor = .lightGray
         }
         print(self.readList)
     }

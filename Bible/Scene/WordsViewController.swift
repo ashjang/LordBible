@@ -1,4 +1,5 @@
 import UIKit
+import WidgetKit
 import FirebaseDatabase
 import FirebaseCoreInternal
 
@@ -187,6 +188,24 @@ class WordsViewController: UIViewController {
                     pushVC?.pikAddressName = self.pikAddressName
                     pushVC?.launchType = true
                     self.navigationController?.pushViewController(pushVC!, animated: true)
+                }),
+                UIAction(title: "Put in widget".localized(), image: UIImage(systemName: "brain"), handler: {
+                    (_) in
+                    let widgetWord = self.copyWords
+                    if widgetWord.isEmpty || widgetWord.count != 1 {
+                        print("length is not enough OR more than 1")
+                        let alert = UIAlertController(title: "Check again".localized(), message: "Please select only one verse".localized(), preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay".localized(), style: .default))
+                        if let viewController = UIApplication.shared.windows.first?.rootViewController {
+                            viewController.present(alert, animated: true)
+                        }
+                    } else {
+                        let sharedDefaults = UserDefaults(suiteName: "group.com.Harim.Lordwords")
+                        sharedDefaults?.setValue("\(self.pikAddressName!.localized()) \(self.pikChapterNum!):\(self.copyWords[0].components(separatedBy: "   ")[0])", forKey: "secondWidgetAddress")
+                        
+                        sharedDefaults?.setValue(self.copyWords[0].components(separatedBy: "   ")[1], forKey: "secondWidgetWord")
+                        WidgetCenter.shared.reloadAllTimelines()
+                    }
                 })
             ]
         }
@@ -696,6 +715,8 @@ extension WordsViewController: UITableViewDelegate, UITableViewDataSource {
         // Copy - copyWords배열에 선택한 말씀이 없다면 추가
         if !self.copyWords.contains(aword) {
             self.copyWords.append(cell?.verseLabel.text as! String)
+//            print(cell?.verseLabel.text as! String)
+            
         }
         // Highlight - copyStarWords배열에 선택한 말씀이 없다면 추가
         if !self.copyStarWords.isEmpty {
