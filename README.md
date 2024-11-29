@@ -21,6 +21,9 @@
     - 읽은 말씀 목록
     - 성경 버전 선택
     - 문의 메일 보내기
+- 위젯(widget)
+    - 매일 랜덤 말씀
+    - 암송하고 싶은 성경 구절
 
 ### 2. 개발 일정
 
@@ -33,13 +36,15 @@
 | 테스트    | 2022/10/20 – 2021/10/31 | 완료  |
 | 오류수정    | 2022/11/01 – 2021/11/07 | 완료  |
 | 깃허브 업로드    | 2022/11/10 | 완료  |
+| 알림 메시지 내용 변경    | 2024/6    | 완료 |
+| 위젯 추가    | 2024/9    | 완료 |
 
 ## 프로젝트 실행
 
 ### 1. 요구 사항
 
 #### Swift application
-- iOS >= 13
+- iOS >= 17
 
 ### 2. 설치 방법
 
@@ -74,4 +79,11 @@
   <img src="doc/img/read_check.jpg" width="300" height="600">
   <img src="doc/img/mail.jpg" width="300" height="600">
   <img src="doc/img/from.jpg" width="300" height="600">
+</div>
+
+#### - 위젯
+<div>
+  <img src="doc/img/widget1.jpg" width="300" height="600">
+  <img src="doc/img/widget2.jpg" width="300" height="600">
+  <img src="doc/img/widget3.jpg" width="300" height="600">
 </div>
